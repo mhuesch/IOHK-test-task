@@ -1,0 +1,6 @@
+resolver: lts-10.6
+packages:
+- .
+extra-deps:
+- git: https://github.com/mhuesch/vector-clock.git
+  commit: 6a8bb7bd7842cea4dca2e4059f81f7ebc87e9e5e

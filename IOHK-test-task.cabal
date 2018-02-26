@@ -1,0 +1,27 @@
+name:                IOHK-test-task
+version:             0.1.0.0
+author:              Michael Hueschen
+maintainer:          michaelhueschen@gmail.com
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable iohktt
+  main-is:             Main.hs
+  hs-source-dirs:      app
+  other-modules:       CmdLine
+  build-depends:       base >=4.9 && <=4.11
+                     , distributed-process
+                     , distributed-process-simplelocalnet
+                     , network-transport-tcp
+                     , binary
+                     , binary-orphans
+                     , mwc-random
+                     , vector
+                     , time
+                     , vector-clock
+  default-language:    Haskell2010
+
+  -- uncomment the line below for a static linked exe.
+  -- CAVEAT that the executable "requires at runtime the shared
+  -- libraries from the glibc version used for linking".
+  -- ghc-options:       -optl-static -optl-pthread
